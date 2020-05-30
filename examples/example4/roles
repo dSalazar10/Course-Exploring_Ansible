@@ -1,0 +1,5 @@
+# This creates the Vault Service. It will include its own Tasks, Templates, Vars, and Files.
+
+- name: Initialize Vault Server
+      include_role:
+        name: vault
