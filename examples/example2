@@ -1,0 +1,14 @@
+# This example shows how conditionals are utilized to install Apache for two different OSs
+# Depending on the operating system, the package repository has a different title
+
+- name: Install Apache
+  apt: 
+     name: apache2
+     state: present
+  when: ansible_facts['os_family'] == 'Debian'
+  
+- name: Install Apache
+  yum: 
+     name: httpd
+     state: present
+  when: ansible_facts['os_family'] == 'Redhat'
