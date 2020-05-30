@@ -1,0 +1,5 @@
+# This is an example of using the variable register to store the results of the function sys_uptime
+
+- name: How long has the server been up
+  shell: uptime
+  register: sys_uptime
